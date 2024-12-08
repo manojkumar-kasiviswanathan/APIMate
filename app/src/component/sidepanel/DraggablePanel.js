@@ -2,6 +2,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import React, { useState } from 'react';
 import './DraggablePanel.css';
+import FolderPicker from '../openFolder/FolderPicker';
 
 const DraggablePanel = () => {
   const [panelWidth, setPanelWidth] = useState(300); // Default width of the panel
@@ -33,7 +34,8 @@ const DraggablePanel = () => {
         className="left-panel"
         style={{ width: `${panelWidth}px` }}
       >
-        <p>This is the draggable panel.</p>
+       <FolderPicker />
+        {/* <p>This is the draggable panel.</p> */}
       </div>
 
       {/* Resizer */}
